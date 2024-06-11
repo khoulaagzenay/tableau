@@ -1,0 +1,14 @@
+string[] username1 = new string [2]{"koko", "GOGO"};
+string[] username2 = new string[2] { "Paul", "Dali" };
+string[] username3 = new string[username1.Length + username2.Length];
+
+//Met à la suite les deux premiers tableaux dans le plus grand
+
+Array.Copy(username1,0, username3, 0, username1.Length);
+Array.Copy(username2, 0, username3, username1.Length, username2.Length);
+
+Console.WriteLine("Le tableau combiné est :");
+foreach (string tableau3 in username3)
+{
+    Console.Write(tableau3 + " ");
+}
